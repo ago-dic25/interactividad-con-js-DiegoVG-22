@@ -1,0 +1,253 @@
+body {
+  padding-right: 60px;
+  font-family: 'Albert Sans', sans-serif;
+}
+
+.contenedor-principal {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 30px;
+  font-family: 'Unbounded', sans-serif;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1px;
+  font-size: 13px;
+  align-items: center;
+}
+
+nav li {
+  padding: 20px 10px 6px;
+  cursor: pointer;
+}
+
+nav li:hover,
+
+nav ul li:hover {
+  background-color: #ddd;
+  text-decoration: underline;
+}
+
+nav ul li:last-child {
+  text-decoration: underline;
+}
+
+.barra-superior {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.lupa {
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lupa i {
+  font-size: 18px;
+}
+
+.boton-menu {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.titulo-autor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+  padding-top: 30px;
+}
+
+main h2 {
+  font-size: 60px;
+  font-family: 'Albert Sans', sans-serif;
+}
+
+.grupo-imagen-cuadros {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.imagen-con-texto {
+  position: relative;
+  display: inline-block;
+}
+
+.imagen-con-texto img {
+  width: 900px;
+  border-radius: 25px;
+  display: block;
+}
+
+.texto-superpuesto,
+.texto-superpuesto-2,
+.texto-superpuesto-3 {
+
+  position: absolute;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 5px 15px;
+  font-size: 16px;
+}
+
+.texto-superpuesto {
+  top: 20px;
+  left: 20px;
+  background-color: rgba(216, 125, 125, 0.5);
+}
+
+.texto-superpuesto-2 {
+  top: 60px;
+  left: 20px;
+  border: 2px solid #000;
+}
+
+.texto-superpuesto-3 {
+  top: 20px;
+  left: 450px;
+  font-size: 45px;
+  background-color: white;
+  padding: 4px 19px;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.flecha-boton {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.flecha-boton:hover {
+  background-color: #eee;
+}
+
+.grupo-cuadros {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cuadro-ads {
+  background-color: #c7dfe4;
+  border-radius: 20px;
+  padding: 20px;
+  width: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cuadro-ads h3 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.etiqueta {
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 15px;
+  width: fit-content;
+}
+
+.subtitulo {
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.link-cuadro {
+  font-size: 13px;
+  color: black;
+  text-decoration: underline;
+  margin-top: auto;
+}
+
+.boton-mas {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cuadro_imagen {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.dark { 
+  background: black; color: white; 
+}
+
+.ocultar {
+  display: none;
+}

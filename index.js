@@ -1,41 +1,53 @@
-//====Variables=====//
-var arreglo = [1, 2, 3, 4, 5];
-var entero = 1;
-var cadena_texto = "Hola Mundo";
-var booleano = true;
+var botonDark = document.getElementById("toggle-dark");
 
-//===Constantes====//
-const PI = 3.1416;
+var botonMas = document.querySelector('.boton-mas');
+var contadorLikes = document.getElementById('contador-likes');
+var likes = 0;
 
-
-//====Funciones====//
-function suma(x, y){
-    var resultado = x + y;
-    console.log("El resultado de la suma es: " + resultado);
-    return resultado;
-}
-
-function imprimirMensaje(mensaje){
-    console.log("Este es mi mensaje " + mensaje);
-}
-
-imprimirMensaje("Hola");
-imprimirMensaje("Vacaciones 1 semana :D");
-imprimirMensaje(true);
-
-suma(1, 2);
-suma(10, 20);
-suma(100, 200);
-
-
-//===Elementos de la pagina como variables===///
 var botonBuscar = document.getElementById("buscar");
+var inputBusqueda = document.getElementById("input-busqueda");
+var tarjetas = document.querySelectorAll('.tarjeta');
 
-console.log(botonBuscar);
-
-//==== Eventos===== //
-botonBuscar.addEventListener("click", function(){
-    //alert("Hiciste clic al boton");
-    botonBuscar.classList.add("rojo");
+botonDark.addEventListener("click", function() {
+    document.body.classList.toggle("dark");
 });
 
+botonMas.addEventListener('click', function() {
+    likes++;
+    contadorLikes.textContent = likes + ' likes';
+});
+
+botonBuscar.addEventListener('click', function() {
+    var texto = inputBusqueda.value.toLowerCase();
+    tarjetas.forEach(function(tarjeta) {
+        var contenido = tarjeta.textContent.toLowerCase();
+        if (contenido.includes(texto)) {
+            tarjeta.classList.remove("ocultar");
+        } else {
+            tarjeta.classList.add("ocultar");
+        }
+    });
+});
+
+var galeriaImg = document.getElementById("galeria-img");
+var seeAll = document.getElementById("seeAll");
+
+var imagenes = [
+    "sombreros.jfif",
+    "sombrero_2.jpeg",
+    "sombrero_3.jpg"
+];
+var indice = 0;
+var intervalo = null;
+
+seeAll.addEventListener("mouseover", function() {
+    intervalo = setInterval(function() {
+        indice = (indice + 1) % imagenes.length;
+        galeriaImg.src = imagenes[indice];
+    }, 2000);
+});
+
+seeAll.addEventListener("mouseout", function() {
+    clearInterval(intervalo);
+    intervalo = null;
+});
