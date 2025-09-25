@@ -247,3 +247,7 @@ main h2 {
 .dark { 
   background: black; color: white; 
 }
+
+.ocultar {
+  display: none;
+}

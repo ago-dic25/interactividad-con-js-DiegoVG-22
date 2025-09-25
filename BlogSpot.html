@@ -26,6 +26,8 @@
             </div>
             <div class="barra-superior">
               <div class="lupa"><i class="fas fa-search"></i></div>
+              <input type="text" id="input-busqueda" placeholder="Escribe tu búsqueda" />
+              <button id="buscar">Buscar</button>
               <button class="boton-menu">Menu</button>
               <button id="toggle-dark" title="Modo oscuro/claro">Oscuro / Claro</button>
             </div>
@@ -45,18 +47,20 @@
               <a href="#" class="flecha-boton"><i class="fas fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="grupo-cuadros">
-              <div class="cuadro-ads">
+              <div class="cuadro-ads tarjeta">
                 <span class="etiqueta">+ ADS</span>
                 <p class="subtitulo">Become A<br><strong>BROADCAST MEMBER</strong></p>
                 <h3>Real talk in a<br>corporate world</h3>
                 <a href="#" class="link-cuadro">Learn more</a>
                 <div class="boton-mas">+</div>
+                <span id="contador-likes">0 👍🏼</span>
               </div>
-              <div class="cuadro-ads">
+              <div class="cuadro-ads tarjeta" id="seeAll">
                 <span class="etiqueta">+ PICKS</span>
                 <h3>See all picks →</h3>
-                <img src="sombreros.jfif" class="cuadro_imagen" />
+                <img src="sombreros.jfif" class="cuadro_imagen" id="galeria-img" />
               </div>
+            </div>
             </div>
           </div>
         </section>
